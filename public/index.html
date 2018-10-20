@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Seat Seeker</title>
+    <style>
+      @font-face {
+          font-family: 'Nunito';
+          font-style: normal;
+          font-weight: 600;
+          src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofA6sKUYevI.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* to have the map be displayed as large as possible */
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-family: Nunito;
+        overflow: hidden;
+      }
+
+      h1 {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        text-align: center;
+        font-size: 6vh;
+        color: #444;
+      }
+
+      select {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        font: 3vh Nunito;
+      }
+
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8D7vSfhzlrfz5aVgCdeWGshD0P6zu4Rg&libraries=visualization"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <!-- this is where the map finally is drawn onto -->
+    <div id="map-canvas"></div>
+    <h1>Seat Seeker Beta</h1>
+
+    <select>
+        <option value="now">now</option>
+        <option value="4">4 PM</option>
+        <option value="5">5 PM</option>
+        <option value="6">6 PM</option>
+      </select>
+  </body>
+</html>
